@@ -1,5 +1,5 @@
 'use strict'
-
+let conBody = document.getElementById('newBody')
 let elBody = document.getElementById('myBody')
 let elBody1= document.getElementById('myBody1')
 let elBody2= document.getElementById("myBody3")
@@ -25,7 +25,7 @@ let Silverspring= {
   }
   }
   //display store-1 name in h2
-let elSilverspring = document.createElement('h3')
+let elSilverspring = document.createElement('h2')
 elBody.appendChild(elSilverspring)
 elSilverspring.innerText = Silverspring.location
 //display store information into html
@@ -55,7 +55,7 @@ let Adelphi= {
   }
   
   
-  //display store-1 name in h2
+  //display store-1 name in h3
   let elAdelphi = document.createElement('h3')
   elBody1.appendChild(elAdelphi)
   elAdelphi.innerText = Adelphi.location
@@ -73,37 +73,37 @@ let Adelphi= {
     elListItem.innerText = hours[i] + ': ' + Adelphi.cookiesPerHour() 
   }
 
-  // Store 3 in Bethesda 
+  Store 3 in Bethesda 
 
-  // let Bethesda= {
-  //   location:'Bethesda',
-  //   minNumCus: 22,
-  //   maxNumCus: 120,
-  //   cookiesPerCus:12,
-  //   cookiesPerHour: function() {
-  //     let randomNumCookies = Math.ceil(Math.random() * (this.maxNumCus-this.minNumCus) + this.minNumCus)
-  //     //console.log(this.cookiesPerHour.randomNumCookies)
-  //     return randomNumCookies * this.cookiesPerCus
-  //     alert(cookiesPerHour())
-  //   }
-  //   }
+  let Bethesda= {
+    location:'Bethesda',
+    minNumCus: 22,
+    maxNumCus: 120,
+    cookiesPerCus:12,
+    cookiesPerHour: function() {
+      let randomNumCookies = Math.ceil(Math.random() * (this.maxNumCus-this.minNumCus) + this.minNumCus)
+      //console.log(this.cookiesPerHour.randomNumCookies)
+      return randomNumCookies * this.cookiesPerCus
+      alert(cookiesPerHour())
+    }
+    }
     
     
-  //   //display store-1 name in h2
-  //   let elBethesda= document.createElement('h3')
-  //   elBody2.appendChild(elBethesda)
-  //   elBethesda.innerText = Bethesda.location
+    //display store-1 name in h2
+    let elBethesda= document.createElement('h3')
+    elBody2.appendChild(elBethesda)
+    elBethesda.innerText = Bethesda.location
     
-  //   //display store information into html
-  //   //let elList = document.createElement('ul')
-  //   elBody.appendChild(elList)
+    //display store information into html
+    //let elList = document.createElement('ul')
+    elBody.appendChild(elList)
     
     
     
-  //   for (let i =0; i<hours.length; i++){
-  //     console.log(hours[i],'Total # of Cookies/hr in the location of', Bethesda.location, Bethesda.cookiesPerHour())
-  //     let elListItem = document.createElement('ul')
-  //     elBody2.appendChild(elListItem)
-  //     elListItem.innerText = hours[i] + ': ' + Bethesda.cookiesPerHour() 
-  //   }
+    for (let i =0; i<hours.length; i++){
+      console.log(hours[i],'Total # of Cookies/hr in the location of', Bethesda.location, Bethesda.cookiesPerHour())
+      let elListItem = document.createElement('ul')
+      elBody2.appendChild(elListItem)
+      elListItem.innerText = hours[i] + ': ' + Bethesda.cookiesPerHour() 
+    }
   
