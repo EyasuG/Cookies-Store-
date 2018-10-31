@@ -1,46 +1,53 @@
 'use strict'
-let conBody = document.getElementById('newBody')
-let elBody = document.getElementById('myBody')
-let elBody1= document.getElementById('myBody1')
-let elBody2= document.getElementById("myBody3")
+ // find element in HTML & match using an Id 
+    let elBody = document.getElementById('myBody')
+    let Table= document.getElementById('Cookies-Table')
+    let hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12am','1pm', '2pm','3pm','4pm','5pm','6pm','7pm']
+    let cookies = []
+
+    // Declare a var & assign it the value of an array that will contain all our store hours 
+
+    let cookiesStore = function (location, min, max, cusNum){
+    this.location = location
+    this.max = max
+    this.min = min
+    this.cusNum = cusNum
+    }
 
 
 
+  // Push new instance to Cookies array
+  cookies.push(Silverspring, Hyattsville, Greenbelt)
 
-let hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12am','1pm', '2pm','3pm','4pm','5pm','6pm','7pm']
-let cookies = []
-//create function that return an object 
-// this the location of cookies store in Silver-Spring
+  // Creating a Table in our HTML
+  let elHeader = document.createElement('tr')
+  Table.appendChild(elHeader)
+  let elTh = document.createElement('th')
+  elHeader.appendChild(elTh)
+  elTh.innerText = 'Stores'
 
-let Silverspring= {
-  location:'Silverspring',
-  minNumCus: 20,
-  maxNumCus: 100,
-  cookiesPerCus:5,
-  cookiesPerHour: function() {
-    let randomNumCookies = Math.ceil(Math.random() * (this.maxNumCus-this.minNumCus) + this.minNumCus)
-    //console.log(this.cookiesPerHour.randomNumCookies)
-    return randomNumCookies * this.cookiesPerCus
-    alert(cookiesPerHour())
+  for (let i =0; i <hours.length; i++){
+    let elTh = document.createElement('th')
+    elHeader.appendChild(elTh)
+    elTh.innerText = hours[i]
   }
-  }
-  //display store-1 name in h2
-let elSilverspring = document.createElement('h2')
-elBody.appendChild(elSilverspring)
-elSilverspring.innerText = Silverspring.location
-//display store information into html
-// let elList = document.createElement('ul')
-// elBody.appendChild(elList)
-for (let i =0; i<hours.length; i++){
-  console.log(hours[i],'Total # of Cookies/hr in the location of', Silverspring.location, Silverspring.cookiesPerHour())
-  let elListItem = document.createElement('ul')
-  elBody.appendChild(elListItem)
-  elListItem.innerText = hours[i] + ': ' + Silverspring.cookiesPerHour() 
-}
-
-// this the location of cookies store in Adelphi 
 
 
+  
+    // create a new row and append it to our table 
+    for (let i =0; i <cookies.length; i++){
+      let row = document.createElement('tr')
+      Table.appendChild(row)
+      //let elTh = document.createElement('th')
+      //elRow.appendChild(elTh)
+       row.innerText = cookies[i].location 
+      for (let j =0; j< hours.length; j++ ){
+        let elTd = document.createElement('td')
+        row.appendChild(elTd)
+        let averagePrint=  elTd.innerText = cookies[i].average()
+        console.log(averagePrint) 
+      }
+=======
 let Adelphi= {
   location:'Adelphi',
   minNumCus: 35,
@@ -101,4 +108,22 @@ let Adelphi= {
       elBody2.appendChild(elListItem)
       elListItem.innerText = hours[i] + ': ' + Bethesda.cookiesPerHour() 
     }
+
   
+    
+
+  let total_header=document.createElement('tr')
+  Table.appendChild(total_header)
+  let total = document.createElement('th')
+  total_header.appendChild(total)
+  total.innerText = 'Total'
+
+  // display Cookies Store in h2
+
+  let elCookiesTitle = document.createElement('h2')
+  elBody.appendChild(elCookiesTitle)
+  elCookiesTitle.innerText = Silverspring.location
+
+  // store information into HTML
+  let elList = document.createElement('ul')
+  elBody.appendChild(elList)
