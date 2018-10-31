@@ -14,16 +14,7 @@
     this.cusNum = cusNum
     }
 
-  cookiesStore.prototype.average = function(){
-      let randomNumCookies = Math.ceil(Math.random() * (this.max - this.min) + this.min)
-      //console.log(randomNumCookies)
-      return (randomNumCookies*this.cusNum)
-  }
 
-  // instantiating a new instance 
-  let Silverspring = new cookiesStore('Silverspring',5, 20, 3)
-  let Hyattsville = new cookiesStore ('Hyattsville', 35, 150, 15)
-  let Greenbelt = new cookiesStore ('Greenbelt', 22, 120, 12)
 
   // Push new instance to Cookies array
   cookies.push(Silverspring, Hyattsville, Greenbelt)
@@ -34,7 +25,6 @@
   let elTh = document.createElement('th')
   elHeader.appendChild(elTh)
   elTh.innerText = 'Stores'
-
 
   for (let i =0; i <hours.length; i++){
     let elTh = document.createElement('th')
@@ -57,6 +47,66 @@
         let averagePrint=  elTd.innerText = cookies[i].average()
         console.log(averagePrint) 
       }
+=======
+let Adelphi= {
+  location:'Adelphi',
+  minNumCus: 35,
+  maxNumCus: 150,
+  cookiesPerCus:15,
+  cookiesPerHour: function() {
+    let randomNumCookies = Math.ceil(Math.random() * (this.maxNumCus-this.minNumCus) + this.minNumCus)
+    //console.log(this.cookiesPerHour.randomNumCookies)
+    return randomNumCookies * this.cookiesPerCus
+    alert(cookiesPerHour())
+  }
+  }
+  
+  //display store-1 name in h3
+  let elAdelphi = document.createElement('h3')
+  elBody1.appendChild(elAdelphi)
+  elAdelphi.innerText = Adelphi.location
+  
+  //display store information into html
+  //let elList = document.createElement('ul')
+  //elBody1.appendChild(elList)
+  
+  for (let i =0; i<hours.length; i++){
+    console.log(hours[i],'Total # of Cookies/hr in the location of', Adelphi.location, Adelphi.cookiesPerHour())
+    let elListItem = document.createElement('ul')
+    elBody1.appendChild(elListItem)
+    elListItem.innerText = hours[i] + ': ' + Adelphi.cookiesPerHour() 
+  }
+
+  //Store 3 in Bethesda 
+
+  let Bethesda= {
+    location:'Bethesda',
+    minNumCus: 22,
+    maxNumCus: 120,
+    cookiesPerCus:12,
+    cookiesPerHour: function() {
+      let randomNumCookies = Math.ceil(Math.random() * (this.maxNumCus-this.minNumCus) + this.minNumCus)
+      console.log(this.cookiesPerHour.randomNumCookies)
+      return randomNumCookies * this.cookiesPerCus
+      alert(cookiesPerHour())
+    }
+    }
+    
+    
+    //display store-1 name in h2
+    let elBethesda= document.createElement('h3')
+    elBody2.appendChild(elBethesda)
+    elBethesda.innerText = Bethesda.location
+    
+    //display store information into html
+    //  let elList = document.createElement('ul')
+    //  elBody2.appendChild(elList)
+    
+    for (let i =0; i<hours.length; i++){
+      console.log(hours[i],'Total # of Cookies/hr in the location of', Bethesda.location, Bethesda.cookiesPerHour())
+      let elListItem = document.createElement('ul')
+      elBody2.appendChild(elListItem)
+      elListItem.innerText = hours[i] + ': ' + Bethesda.cookiesPerHour() 
     }
 
   
