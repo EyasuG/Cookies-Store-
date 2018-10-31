@@ -9,7 +9,7 @@ let elBody2= document.getElementById("myBody3")
 
 let hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12am','1pm', '2pm','3pm','4pm','5pm','6pm','7pm']
 let cookies = []
-
+//create function that return an object 
 // this the location of cookies store in Silver-Spring
 
 let Silverspring= {
@@ -48,12 +48,11 @@ let Adelphi= {
   cookiesPerCus:15,
   cookiesPerHour: function() {
     let randomNumCookies = Math.ceil(Math.random() * (this.maxNumCus-this.minNumCus) + this.minNumCus)
-    console.log(this.cookiesPerHour.randomNumCookies)
+    //console.log(this.cookiesPerHour.randomNumCookies)
     return randomNumCookies * this.cookiesPerCus
     alert(cookiesPerHour())
   }
   }
-  
   
   //display store-1 name in h3
   let elAdelphi = document.createElement('h3')
@@ -61,19 +60,17 @@ let Adelphi= {
   elAdelphi.innerText = Adelphi.location
   
   //display store information into html
-  let elList = document.createElement('ul')
-  elBody1.appendChild(elList)
-  
-  
+  //let elList = document.createElement('ul')
+  //elBody1.appendChild(elList)
   
   for (let i =0; i<hours.length; i++){
     console.log(hours[i],'Total # of Cookies/hr in the location of', Adelphi.location, Adelphi.cookiesPerHour())
     let elListItem = document.createElement('ul')
-    elBody1.appendChild(elAdelphi)
+    elBody1.appendChild(elListItem)
     elListItem.innerText = hours[i] + ': ' + Adelphi.cookiesPerHour() 
   }
 
-  Store 3 in Bethesda 
+  //Store 3 in Bethesda 
 
   let Bethesda= {
     location:'Bethesda',
@@ -82,7 +79,7 @@ let Adelphi= {
     cookiesPerCus:12,
     cookiesPerHour: function() {
       let randomNumCookies = Math.ceil(Math.random() * (this.maxNumCus-this.minNumCus) + this.minNumCus)
-      //console.log(this.cookiesPerHour.randomNumCookies)
+      console.log(this.cookiesPerHour.randomNumCookies)
       return randomNumCookies * this.cookiesPerCus
       alert(cookiesPerHour())
     }
@@ -95,10 +92,8 @@ let Adelphi= {
     elBethesda.innerText = Bethesda.location
     
     //display store information into html
-    //let elList = document.createElement('ul')
-    elBody.appendChild(elList)
-    
-    
+    //  let elList = document.createElement('ul')
+    //  elBody2.appendChild(elList)
     
     for (let i =0; i<hours.length; i++){
       console.log(hours[i],'Total # of Cookies/hr in the location of', Bethesda.location, Bethesda.cookiesPerHour())
