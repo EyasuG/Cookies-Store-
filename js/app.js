@@ -22,11 +22,11 @@
 
   // instantiating a new instance 
   let Silverspring = new cookiesStore('Silverspring',5, 20, 3)
-  let Hyattsville = new cookiesStore ('Hyattsville', 35, 150, 15)
-  let Greenbelt = new cookiesStore ('Greenbelt', 22, 120, 12)
+  let Hyattsville = new cookiesStore ('Adelphi', 35, 150, 15)
+  let DC = new cookiesStore ('DC', 22, 120, 12)
 
   // Push new instance to Cookies array
-  cookies.push(Silverspring, Hyattsville, Greenbelt)
+  cookies.push(Silverspring, Hyattsville, DC )
 
   // Creating a Table in our HTML
   let elHeader = document.createElement('tr')
@@ -77,3 +77,4 @@
   // store information into HTML
   let elList = document.createElement('ul')
   elBody.appendChild(elList)
+  let stoe = document.createElement()
