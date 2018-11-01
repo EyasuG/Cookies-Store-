@@ -109,9 +109,6 @@ let Adelphi= {
       elListItem.innerText = hours[i] + ': ' + Bethesda.cookiesPerHour() 
     }
 
-  
-    
-
   let total_header=document.createElement('tr')
   Table.appendChild(total_header)
   let total = document.createElement('th')
