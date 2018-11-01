@@ -59,9 +59,6 @@
       }
     }
 
-  
-    
-
   let total_header=document.createElement('tr')
   Table.appendChild(total_header)
   let total = document.createElement('th')
