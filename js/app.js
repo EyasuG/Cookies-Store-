@@ -100,8 +100,8 @@ cookiesStore.prototype.average = function(){
 
 // instantiating a new instance 
 let Silverspring = new cookiesStore('Silverspring',5, 20, 3)
-let Bethesda = new cookiesStore ('Hyattsville', 35, 150, 15)
-let Geitsberg= new cookiesStore ('Greenbelt', 22, 120, 12)
+let Bethesda = new cookiesStore ('Bethesda', 35, 150, 15)
+let Geitsberg= new cookiesStore ('Geitsberg', 22, 120, 12)
 
 // Push new instance to Cookies array
 cookies.push(Silverspring, Bethesda, Geitsberg)
